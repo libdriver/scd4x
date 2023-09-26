@@ -1,0 +1,66 @@
+var group__scd4x__basic__driver =
+[
+    [ "scd4x_handle_s", "structscd4x__handle__s.html", [
+      [ "debug_print", "structscd4x__handle__s.html#a769d5b3a6c14790a0e126e8fe70b384b", null ],
+      [ "delay_ms", "structscd4x__handle__s.html#a406c9433252b7366de417b7a60915c81", null ],
+      [ "iic_deinit", "structscd4x__handle__s.html#af6963bbad902ca6e43942b48c07986c3", null ],
+      [ "iic_init", "structscd4x__handle__s.html#a8826dd07625f8d90859ce9bd09628d61", null ],
+      [ "iic_read_cmd", "structscd4x__handle__s.html#acebeabb312305acedcb64f4f10755117", null ],
+      [ "iic_write_cmd", "structscd4x__handle__s.html#af9cb104d353f0c18dbb0fd01405f4889", null ],
+      [ "inited", "structscd4x__handle__s.html#a19bedf28d2b9748f6a62d9ae93f4e68f", null ],
+      [ "type", "structscd4x__handle__s.html#a1d127017fb298b889f4ba24752d08b8e", null ]
+    ] ],
+    [ "scd4x_info_s", "structscd4x__info__s.html", [
+      [ "chip_name", "structscd4x__info__s.html#af890958c72bd715cc6454a10dc846ae6", null ],
+      [ "driver_version", "structscd4x__info__s.html#a41b0bd442708b70d252c50b92c75265a", null ],
+      [ "interface", "structscd4x__info__s.html#aebaa6c28dd4f2c3dc27566fcb910fd28", null ],
+      [ "manufacturer_name", "structscd4x__info__s.html#ad25285dbf810c90f8eaf3fcef6f2b2ea", null ],
+      [ "max_current_ma", "structscd4x__info__s.html#a9db82802561bf22d799b03a345f1d1dc", null ],
+      [ "supply_voltage_max_v", "structscd4x__info__s.html#a3d2b12bcac7a85ea8646bff9debe8660", null ],
+      [ "supply_voltage_min_v", "structscd4x__info__s.html#ad8bde6ddadaf43d951e62f3befb9d35a", null ],
+      [ "temperature_max", "structscd4x__info__s.html#a3366a5dce9b829e03c3d321c2b4df3f6", null ],
+      [ "temperature_min", "structscd4x__info__s.html#a8f9dbe66ac0b66ebae0a36fcb4ba368e", null ]
+    ] ],
+    [ "scd4x_handle_t", "group__scd4x__basic__driver.html#gaa9f5326f02b12285b45f4ec12da16241", null ],
+    [ "scd4x_info_t", "group__scd4x__basic__driver.html#ga009fd7b81866143b6927a4a3c982b9eb", null ],
+    [ "scd4x_bool_t", "group__scd4x__basic__driver.html#gae4facb3b5577888f442ba8da9a4bcc1e", [
+      [ "SCD4X_BOOL_FALSE", "group__scd4x__basic__driver.html#ggae4facb3b5577888f442ba8da9a4bcc1ead023504669daa1a3852d538ab8836e08", null ],
+      [ "SCD4X_BOOL_TRUE", "group__scd4x__basic__driver.html#ggae4facb3b5577888f442ba8da9a4bcc1ea0e4f3fd944cab0a195922bbbad2725d2", null ]
+    ] ],
+    [ "scd4x_t", "group__scd4x__basic__driver.html#gad7a030dc642b22411672591e73b40137", [
+      [ "SCD40", "group__scd4x__basic__driver.html#ggad7a030dc642b22411672591e73b40137a6519db054854c3331da041608a8117a4", null ],
+      [ "SCD41", "group__scd4x__basic__driver.html#ggad7a030dc642b22411672591e73b40137a4e83b8b73d944b4f079bdb11171ac84e", null ]
+    ] ],
+    [ "scd4x_ambient_pressure_convert_to_data", "group__scd4x__basic__driver.html#gab46edf8d2ddbf20010a3f52bc24ffbf6", null ],
+    [ "scd4x_ambient_pressure_convert_to_register", "group__scd4x__basic__driver.html#ga72ccb16bec6cbd794d5ec0b78a46002e", null ],
+    [ "scd4x_co2_convert_to_data", "group__scd4x__basic__driver.html#ga7a66a2b46511dbd3d05ac2b3719d954d", null ],
+    [ "scd4x_co2_convert_to_register", "group__scd4x__basic__driver.html#ga3e65fd46450b9dc816bda611724aec5f", null ],
+    [ "scd4x_deinit", "group__scd4x__basic__driver.html#ga1f054162b41924d421d9d50f326c21f4", null ],
+    [ "scd4x_get_ambient_pressure", "group__scd4x__basic__driver.html#gaf763168ef23d9f7950775f3968cbf1d2", null ],
+    [ "scd4x_get_automatic_self_calibration", "group__scd4x__basic__driver.html#ga24043549a7847a5de712c846efcaad98", null ],
+    [ "scd4x_get_data_ready_status", "group__scd4x__basic__driver.html#ga03ba59a13acd4649e28a5658e9b50c8d", null ],
+    [ "scd4x_get_sensor_altitude", "group__scd4x__basic__driver.html#ga0a8400bcec8dc54be5104b607b4e0bc7", null ],
+    [ "scd4x_get_serial_number", "group__scd4x__basic__driver.html#ga172ceddb58fa6d17d0cc5b12cbaf9cf4", null ],
+    [ "scd4x_get_temperature_offset", "group__scd4x__basic__driver.html#ga6622438a8624cd4b9f172f8423bc9539", null ],
+    [ "scd4x_get_type", "group__scd4x__basic__driver.html#ga02406e8ae0fa67ae6eab34f9aeb48c00", null ],
+    [ "scd4x_info", "group__scd4x__basic__driver.html#gab1e12886bbbcf7258b0640a25b992254", null ],
+    [ "scd4x_init", "group__scd4x__basic__driver.html#ga873aa589ed9fdc270fc35e5523b002fc", null ],
+    [ "scd4x_perform_factory_reset", "group__scd4x__basic__driver.html#ga8dbf8205e7a480982f6cef02b9aab74f", null ],
+    [ "scd4x_perform_forced_recalibration", "group__scd4x__basic__driver.html#ga8d01b7e81f6910d68d71c64ce273cd39", null ],
+    [ "scd4x_perform_self_test", "group__scd4x__basic__driver.html#gaacb1b2f9cf124b5958048e58dc2c378c", null ],
+    [ "scd4x_persist_settings", "group__scd4x__basic__driver.html#ga9cf9617307b85e804c9036de86d47383", null ],
+    [ "scd4x_read", "group__scd4x__basic__driver.html#ga526f979dff28e64414aafeffce19bf6a", null ],
+    [ "scd4x_reinit", "group__scd4x__basic__driver.html#ga7231902332ecb08dd7882a59c3544a13", null ],
+    [ "scd4x_sensor_altitude_convert_to_data", "group__scd4x__basic__driver.html#ga0f5ccc7a0c716574a965d2a2221c6fc2", null ],
+    [ "scd4x_sensor_altitude_convert_to_register", "group__scd4x__basic__driver.html#gabc9a55f710e6bd3d421410d40206fff5", null ],
+    [ "scd4x_set_ambient_pressure", "group__scd4x__basic__driver.html#ga33eeedaa42be605d9539c93a82750692", null ],
+    [ "scd4x_set_automatic_self_calibration", "group__scd4x__basic__driver.html#ga7df588ebd88f74fa7949bd8fe995e4e1", null ],
+    [ "scd4x_set_sensor_altitude", "group__scd4x__basic__driver.html#gab770be0110e8639d19fe41e61d618147", null ],
+    [ "scd4x_set_temperature_offset", "group__scd4x__basic__driver.html#ga155960c81e084198a99ced957f122d6d", null ],
+    [ "scd4x_set_type", "group__scd4x__basic__driver.html#ga62c640c47366d71fc4cf405b82084371", null ],
+    [ "scd4x_start_low_power_periodic_measurement", "group__scd4x__basic__driver.html#gaf831a867843519e4c50904814b90b2b7", null ],
+    [ "scd4x_start_periodic_measurement", "group__scd4x__basic__driver.html#gaa2152f75a36ec95adddd9d7a23907032", null ],
+    [ "scd4x_stop_periodic_measurement", "group__scd4x__basic__driver.html#ga067b1e107f9ae3ca1189d54c3f22d572", null ],
+    [ "scd4x_temperature_offset_convert_to_data", "group__scd4x__basic__driver.html#gacaa7c67d930895efea807e02fd5a4d8d", null ],
+    [ "scd4x_temperature_offset_convert_to_register", "group__scd4x__basic__driver.html#ga678034f88f5ae2bb7abad632a5ec86d5", null ]
+];
