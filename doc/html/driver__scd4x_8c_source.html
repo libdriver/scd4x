@@ -355,7 +355,7 @@ $(document).ready(function(){initNavTree('driver__scd4x_8c_source.html',''); ini
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    *humidity_raw = (uint16_t)(((uint16_t)buf[6]) &lt;&lt; 8) | buf[7];                         <span class="comment">/* set humidity raw */</span></div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    *co2_ppm = *co2_raw;                                                                  <span class="comment">/* set co2 ppm */</span></div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    *temperature_s = -45.0f + 175.0f * (float)(*temperature_raw) / 65535.0f;              <span class="comment">/* set temperature */</span></div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    *humidity_s = 100.0f * (float)(*temperature_raw) / 65535.0f;                          <span class="comment">/* set humidity */</span></div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    *humidity_s = 100.0f * (float)(*humidity_raw) / 65535.0f;                             <span class="comment">/* set humidity */</span></div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    </div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keywordflow">return</span> 0;                                                                             <span class="comment">/* success return 0 */</span></div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;}</div>
