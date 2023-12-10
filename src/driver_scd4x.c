@@ -405,7 +405,7 @@ uint8_t scd4x_read(scd4x_handle_t *handle, uint16_t *co2_raw, uint16_t *co2_ppm,
     *humidity_raw = (uint16_t)(((uint16_t)buf[6]) << 8) | buf[7];                         /* set humidity raw */
     *co2_ppm = *co2_raw;                                                                  /* set co2 ppm */
     *temperature_s = -45.0f + 175.0f * (float)(*temperature_raw) / 65535.0f;              /* set temperature */
-    *humidity_s = 100.0f * (float)(*temperature_raw) / 65535.0f;                          /* set humidity */
+    *humidity_s = 100.0f * (float)(*humidity_raw) / 65535.0f;                             /* set humidity */
     
     return 0;                                                                             /* success return 0 */
 }
