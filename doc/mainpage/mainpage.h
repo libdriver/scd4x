@@ -1,6 +1,6 @@
 /**
  * @mainpage  LibDriver SCD4X
- * @brief     libdriver scd4x is a full function driver of scd4x and it can run in both MCU and Linux platform.
+ * @brief     LibDriver SCD4X is a full function driver of SCD4X and it can run in both MCU and Linux platform.
  * @version   1.0.0
  * @author    Shifeng Li
  *
