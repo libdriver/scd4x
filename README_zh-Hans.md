@@ -8,7 +8,7 @@
 
 [![MISRA](https://img.shields.io/badge/misra-compliant-brightgreen.svg)](/misra/README.md) [![API](https://img.shields.io/badge/api-reference-blue.svg)](https://www.libdriver.com/docs/scd4x/index.html) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
 
-SCD4x是Sensionon的下一代微型二氧化碳传感器。该传感器基于光声NDIR传感原理和Sensionon的专利PASens®和CMOSens®技术，以无与伦比的价格和最小的形状因子提供高精度。SMD组件允许传感器的成本和空间有效集成，并具有最大的设计自由度。芯片上的信号补偿是通过内置SHT4x湿度和温度传感器实现的。二氧化碳是室内空气质量（IAQ）的一个关键指标，因为高水平的二氧化碳会损害人类的认知能力和幸福感。SCD4x使智能通风系统能够以最节能、最人性化的方式调节通风。此外，基于SCD4x的室内空气质量监测器和其他连接设备有助于保持低二氧化碳浓度，营造健康、高效的环境。
+SCD4x是Sensionon的下一代微型二氧化碳传感器。该传感器基于光声NDIR传感原理和Sensionon的专利PASens®和CMOSens®技术，提供无与伦比的价格和最小封装的高精度解决方案。SMD组件允许传感器的成本和空间有效集成，并具有最大的设计自由度。芯片上的信号补偿是通过内置SHT4x湿度和温度传感器实现的。二氧化碳是室内空气质量（IAQ）的一个关键指标，因为高水平的二氧化碳会损害人类的认知能力和幸福感。SCD4x使智能通风系统能够以最节能、最人性化的方式调节通风。此外，基于SCD4x的室内空气质量监测器和其他连接设备有助于保持低二氧化碳浓度，营造健康、高效的环境。
 
 LibDriver SCD4X是LibDriver推出的SCD4X全功能驱动，该驱动提供CO2读取、温度读取、湿度读取等功能并且它符合MISRA标准。
 
