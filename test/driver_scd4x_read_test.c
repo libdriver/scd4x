@@ -40,8 +40,8 @@ static scd4x_handle_t gs_handle;        /**< scd4x handle */
 
 /**
  * @brief     read test
- * @param[in] type is the chip type
- * @param[in] times is test times
+ * @param[in] type chip type
+ * @param[in] times test times
  * @return    status code
  *            - 0 success
  *            - 1 test failed

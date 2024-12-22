@@ -52,7 +52,7 @@ extern "C"{
 
 /**
  * @brief     register test
- * @param[in] type is the chip type
+ * @param[in] type chip type
  * @return    status code
  *            - 0 success
  *            - 1 test failed

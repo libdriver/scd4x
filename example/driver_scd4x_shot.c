@@ -40,7 +40,7 @@ static scd4x_handle_t gs_handle;        /**< scd4x handle */
 
 /**
  * @brief     shot example init
- * @param[in] type is the chip type
+ * @param[in] type chip type
  * @return    status code
  *            - 0 success
  *            - 1 init failed
@@ -82,9 +82,9 @@ uint8_t scd4x_shot_init(scd4x_t type)
 
 /**
  * @brief      shot example read
- * @param[out] *co2_ppm points to a converted co2 buffer
- * @param[out] *temperature points to a converted temperature buffer
- * @param[out] *humidity points to a converted humidity buffer
+ * @param[out] *co2_ppm pointer to a converted co2 buffer
+ * @param[out] *temperature pointer to a converted temperature buffer
+ * @param[out] *humidity pointer to a converted humidity buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -168,7 +168,7 @@ uint8_t scd4x_shot_deinit(void)
 
 /**
  * @brief      shot example get serial number
- * @param[out] *num points to a number buffer
+ * @param[out] *num pointer to a number buffer
  * @return     status code
  *             - 0 success
  *             - 1 get serial number failed
