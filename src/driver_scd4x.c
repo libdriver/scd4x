@@ -92,13 +92,13 @@
 
 /**
  * @brief      read bytes with param
- * @param[in]  *handle points to an scd4x handle structure
- * @param[in]  reg is the iic register address
- * @param[in]  *data points to a data buffer
- * @param[in]  len is the data length
- * @param[in]  delay_ms is the delay time in ms
- * @param[out] *output points to an output buffer
- * @param[in]  output_len is the output length
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[in]  reg iic register address
+ * @param[in]  *data pointer to a data buffer
+ * @param[in]  len data length
+ * @param[in]  delay_ms delay time in ms
+ * @param[out] *output pointer to an output buffer
+ * @param[in]  output_len output length
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -139,11 +139,11 @@ static uint8_t a_scd4x_iic_read_with_param(scd4x_handle_t *handle, uint16_t reg,
 
 /**
  * @brief      read bytes
- * @param[in]  *handle points to an scd4x handle structure
- * @param[in]  reg is the iic register address
- * @param[out] *data points to a data buffer
- * @param[in]  len is the data length
- * @param[in]  delay_ms is the delay time in ms
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[in]  reg iic register address
+ * @param[out] *data pointer to a data buffer
+ * @param[in]  len data length
+ * @param[in]  delay_ms delay time in ms
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -173,10 +173,10 @@ static uint8_t a_scd4x_iic_read(scd4x_handle_t *handle, uint16_t reg, uint8_t *d
 
 /**
  * @brief     write bytes
- * @param[in] *handle points to an scd4x handle structure
- * @param[in] reg is the iic register address
- * @param[in] *data points to a data buffer
- * @param[in] len is the data length
+ * @param[in] *handle pointer to an scd4x handle structure
+ * @param[in] reg iic register address
+ * @param[in] *data pointer to a data buffer
+ * @param[in] len data length
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -211,8 +211,8 @@ static uint8_t a_scd4x_iic_write(scd4x_handle_t *handle, uint16_t reg, uint8_t *
 
 /**
  * @brief     generate the crc
- * @param[in] *data points to a data buffer
- * @param[in] count is the data length
+ * @param[in] *data pointer to a data buffer
+ * @param[in] count data length
  * @return    crc
  * @note      none
  */
@@ -243,8 +243,8 @@ static uint8_t a_scd4x_generate_crc(uint8_t* data, uint8_t count)
 
 /**
  * @brief     set type
- * @param[in] *handle points to an scd4x handle structure
- * @param[in] type is the chip type
+ * @param[in] *handle pointer to an scd4x handle structure
+ * @param[in] type chip type
  * @return    status code
  *            - 0 success
  *            - 2 handle is NULL
@@ -264,8 +264,8 @@ uint8_t scd4x_set_type(scd4x_handle_t *handle, scd4x_t type)
 
 /**
  * @brief      get type
- * @param[in]  *handle points to an scd4x handle structure
- * @param[out] *type points to a chip type buffer
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[out] *type pointer to a chip type buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -285,7 +285,7 @@ uint8_t scd4x_get_type(scd4x_handle_t *handle, scd4x_t *type)
 
 /**
  * @brief     start periodic measurement
- * @param[in] *handle points to an scd4x handle structure
+ * @param[in] *handle pointer to an scd4x handle structure
  * @return    status code
  *            - 0 success
  *            - 1 start periodic measurement failed
@@ -319,13 +319,13 @@ uint8_t scd4x_start_periodic_measurement(scd4x_handle_t *handle)
 
 /**
  * @brief      read data
- * @param[in]  *handle points to an scd4x handle structure
- * @param[out] *co2_raw points to a co2 raw buffer
- * @param[out] *co2_ppm points to a co2 ppm buffer
- * @param[out] *temperature_raw points to a temperature raw buffer
- * @param[out] *temperature_s points to a temperature buffer
- * @param[out] *humidity_raw points to a humidity raw buffer
- * @param[out] *humidity_s points to a humidity buffer
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[out] *co2_raw pointer to a co2 raw buffer
+ * @param[out] *co2_ppm pointer to a co2 ppm buffer
+ * @param[out] *temperature_raw pointer to a temperature raw buffer
+ * @param[out] *temperature_s pointer to a temperature buffer
+ * @param[out] *humidity_raw pointer to a humidity raw buffer
+ * @param[out] *humidity_s pointer to a humidity buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -412,7 +412,7 @@ uint8_t scd4x_read(scd4x_handle_t *handle, uint16_t *co2_raw, uint16_t *co2_ppm,
 
 /**
  * @brief     stop periodic measurement
- * @param[in] *handle points to an scd4x handle structure
+ * @param[in] *handle pointer to an scd4x handle structure
  * @return    status code
  *            - 0 success
  *            - 1 stop periodic measurement failed
@@ -447,8 +447,8 @@ uint8_t scd4x_stop_periodic_measurement(scd4x_handle_t *handle)
 
 /**
  * @brief     set temperature offset
- * @param[in] *handle points to an scd4x handle structure
- * @param[in] offset is the temperature offset
+ * @param[in] *handle pointer to an scd4x handle structure
+ * @param[in] offset temperature offset
  * @return    status code
  *            - 0 success
  *            - 1 set temperature offset failed
@@ -487,8 +487,8 @@ uint8_t scd4x_set_temperature_offset(scd4x_handle_t *handle, uint16_t offset)
 
 /**
  * @brief      get temperature offset
- * @param[in]  *handle points to an scd4x handle structure
- * @param[out] *offset points to a temperature offset buffer
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[out] *offset pointer to a temperature offset buffer
  * @return     status code
  *             - 0 success
  *             - 1 get temperature offset failed
@@ -531,9 +531,9 @@ uint8_t scd4x_get_temperature_offset(scd4x_handle_t *handle, uint16_t *offset)
 
 /**
  * @brief      convert the temperature offset to the register raw data
- * @param[in]  *handle points to an scd4x handle structure
- * @param[in]  degrees is the degrees
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[in]  degrees set degrees
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -558,9 +558,9 @@ uint8_t scd4x_temperature_offset_convert_to_register(scd4x_handle_t *handle, flo
 
 /**
  * @brief      convert the register raw data to the temperature offset
- * @param[in]  *handle points to an scd4x handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *degrees points to a temperature offset buffer
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *degrees pointer to a temperature offset buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -585,8 +585,8 @@ uint8_t scd4x_temperature_offset_convert_to_data(scd4x_handle_t *handle, uint16_
 
 /**
  * @brief     set sensor altitude
- * @param[in] *handle points to an scd4x handle structure
- * @param[in] altitude is the set altitude
+ * @param[in] *handle pointer to an scd4x handle structure
+ * @param[in] altitude set altitude
  * @return    status code
  *            - 0 success
  *            - 1 set sensor altitude failed
@@ -625,8 +625,8 @@ uint8_t scd4x_set_sensor_altitude(scd4x_handle_t *handle, uint16_t altitude)
 
 /**
  * @brief      get sensor altitude
- * @param[in]  *handle points to an scd4x handle structure
- * @param[out] *altitude points to an altitude buffer
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[out] *altitude pointer to an altitude buffer
  * @return     status code
  *             - 0 success
  *             - 1 get sensor altitude failed
@@ -669,9 +669,9 @@ uint8_t scd4x_get_sensor_altitude(scd4x_handle_t *handle, uint16_t *altitude)
 
 /**
  * @brief      convert the sensor altitude to the register raw data
- * @param[in]  *handle points to an scd4x handle structure
- * @param[in]  m is the set m
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[in]  m set m
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -696,9 +696,9 @@ uint8_t scd4x_sensor_altitude_convert_to_register(scd4x_handle_t *handle, float 
 
 /**
  * @brief      convert the register raw data to the sensor altitude
- * @param[in]  *handle points to an scd4x handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *m points to an m buffer
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *m pointer to an m buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -723,8 +723,8 @@ uint8_t scd4x_sensor_altitude_convert_to_data(scd4x_handle_t *handle, uint16_t r
 
 /**
  * @brief     set ambient pressure
- * @param[in] *handle points to an scd4x handle structure
- * @param[in] pressure is the set pressure
+ * @param[in] *handle pointer to an scd4x handle structure
+ * @param[in] pressure set pressure
  * @return    status code
  *            - 0 success
  *            - 1 set ambient pressure failed
@@ -763,8 +763,8 @@ uint8_t scd4x_set_ambient_pressure(scd4x_handle_t *handle, uint16_t pressure)
 
 /**
  * @brief      get ambient pressure
- * @param[in]  *handle points to an scd4x handle structure
- * @param[out] *pressure points to a pressure buffer
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[out] *pressure pointer to a pressure buffer
  * @return     status code
  *             - 0 success
  *             - 1 get ambient pressure failed
@@ -807,9 +807,9 @@ uint8_t scd4x_get_ambient_pressure(scd4x_handle_t *handle, uint16_t *pressure)
 
 /**
  * @brief      convert the ambient pressure to the register raw data
- * @param[in]  *handle points to an scd4x handle structure
- * @param[in]  pa is the set pa
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[in]  pa set pa
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -834,9 +834,9 @@ uint8_t scd4x_ambient_pressure_convert_to_register(scd4x_handle_t *handle, float
 
 /**
  * @brief      convert the register raw data to the ambient pressure
- * @param[in]  *handle points to an scd4x handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *pa points to a pa buffer
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *pa pointer to a pa buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -861,9 +861,9 @@ uint8_t scd4x_ambient_pressure_convert_to_data(scd4x_handle_t *handle, uint16_t 
 
 /**
  * @brief      perform forced recalibration
- * @param[in]  *handle points to an scd4x handle structure
- * @param[in]  co2_raw is the co2 raw data
- * @param[out] *frc points to a frc buffer
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[in]  co2_raw co2 raw data
+ * @param[out] *frc pointer to a frc buffer
  * @return     status code
  *             - 0 success
  *             - 1 perform forced recalibration failed
@@ -911,9 +911,9 @@ uint8_t scd4x_perform_forced_recalibration(scd4x_handle_t *handle, uint16_t co2_
 
 /**
  * @brief      convert the co2 to the register raw data
- * @param[in]  *handle points to an scd4x handle structure
- * @param[in]  ppm is the set ppm
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[in]  ppm set ppm
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -938,9 +938,9 @@ uint8_t scd4x_co2_convert_to_register(scd4x_handle_t *handle, float ppm, uint16_
 
 /**
  * @brief      convert the register raw data to the co2
- * @param[in]  *handle points to an scd4x handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *ppm points to a ppm buffer
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *ppm pointer to a ppm buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -965,8 +965,8 @@ uint8_t scd4x_co2_convert_to_data(scd4x_handle_t *handle, uint16_t reg, float *p
 
 /**
  * @brief     enable or disable automatic self calibration 
- * @param[in] *handle points to an scd4x handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an scd4x handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set automatic self calibration failed
@@ -1007,8 +1007,8 @@ uint8_t scd4x_set_automatic_self_calibration(scd4x_handle_t *handle, scd4x_bool_
 
 /**
  * @brief      get automatic self calibration status
- * @param[in]  *handle points to an scd4x handle structure
- * @param[out] *enable points to a bool buffer
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[out] *enable pointer to a bool buffer
  * @return     status code
  *             - 0 success
  *             - 1 get automatic self calibration failed
@@ -1053,7 +1053,7 @@ uint8_t scd4x_get_automatic_self_calibration(scd4x_handle_t *handle, scd4x_bool_
 
 /**
  * @brief     start low power periodic measurement
- * @param[in] *handle points to an scd4x handle structure
+ * @param[in] *handle pointer to an scd4x handle structure
  * @return    status code
  *            - 0 success
  *            - 1 start low power periodic measurement failed
@@ -1087,8 +1087,8 @@ uint8_t scd4x_start_low_power_periodic_measurement(scd4x_handle_t *handle)
 
 /**
  * @brief      get data ready status
- * @param[in]  *handle points to an scd4x handle structure
- * @param[out] *enable points to a bool buffer
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[out] *enable pointer to a bool buffer
  * @return     status code
  *             - 0 success
  *             - 1 get data ready status failed
@@ -1140,7 +1140,7 @@ uint8_t scd4x_get_data_ready_status(scd4x_handle_t *handle, scd4x_bool_t *enable
 
 /**
  * @brief     persist settings
- * @param[in] *handle points to an scd4x handle structure
+ * @param[in] *handle pointer to an scd4x handle structure
  * @return    status code
  *            - 0 success
  *            - 1 persist settings failed
@@ -1175,8 +1175,8 @@ uint8_t scd4x_persist_settings(scd4x_handle_t *handle)
 
 /**
  * @brief      get serial number
- * @param[in]  *handle points to an scd4x handle structure
- * @param[out] *number points to a number buffer
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[out] *number pointer to a number buffer
  * @return     status code
  *             - 0 success
  *             - 1 get serial number failed
@@ -1233,8 +1233,8 @@ uint8_t scd4x_get_serial_number(scd4x_handle_t *handle, uint16_t number[3])
 
 /**
  * @brief      perform self test
- * @param[in]  *handle points to an scd4x handle structure
- * @param[out] *malfunction_detected points to a bool value buffer
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[out] *malfunction_detected pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 perform self test failed
@@ -1286,7 +1286,7 @@ uint8_t scd4x_perform_self_test(scd4x_handle_t *handle, scd4x_bool_t *malfunctio
 
 /**
  * @brief     perform factory reset
- * @param[in] *handle points to an scd4x handle structure
+ * @param[in] *handle pointer to an scd4x handle structure
  * @return    status code
  *            - 0 success
  *            - 1 perform factory reset failed
@@ -1321,7 +1321,7 @@ uint8_t scd4x_perform_factory_reset(scd4x_handle_t *handle)
 
 /**
  * @brief     reinit
- * @param[in] *handle points to an scd4x handle structure
+ * @param[in] *handle pointer to an scd4x handle structure
  * @return    status code
  *            - 0 success
  *            - 1 reinit failed
@@ -1356,7 +1356,7 @@ uint8_t scd4x_reinit(scd4x_handle_t *handle)
 
 /**
  * @brief     measure single shot
- * @param[in] *handle points to an scd4x handle structure
+ * @param[in] *handle pointer to an scd4x handle structure
  * @return    status code
  *            - 0 success
  *            - 1 measure single shot failed
@@ -1398,7 +1398,7 @@ uint8_t scd4x_measure_single_shot(scd4x_handle_t *handle)
 
 /**
  * @brief     measure single shot rht only
- * @param[in] *handle points to an scd4x handle structure
+ * @param[in] *handle pointer to an scd4x handle structure
  * @return    status code
  *            - 0 success
  *            - 1 measure single shot rht only failed
@@ -1440,7 +1440,7 @@ uint8_t scd4x_measure_single_shot_rht_only(scd4x_handle_t *handle)
 
 /**
  * @brief     power down
- * @param[in] *handle points to an scd4x handle structure
+ * @param[in] *handle pointer to an scd4x handle structure
  * @return    status code
  *            - 0 success
  *            - 1 power down failed
@@ -1482,7 +1482,7 @@ uint8_t scd4x_power_down(scd4x_handle_t *handle)
 
 /**
  * @brief     wake up
- * @param[in] *handle points to an scd4x handle structure
+ * @param[in] *handle pointer to an scd4x handle structure
  * @return    status code
  *            - 0 success
  *            - 1 wake up failed
@@ -1516,8 +1516,8 @@ uint8_t scd4x_wake_up(scd4x_handle_t *handle)
 
 /**
  * @brief     set automatic self calibration initial period
- * @param[in] *handle points to an scd4x handle structure
- * @param[in] hour is the set hour
+ * @param[in] *handle pointer to an scd4x handle structure
+ * @param[in] hour set hour
  * @return    status code
  *            - 0 success
  *            - 1 set automatic self calibration initial period failed
@@ -1570,8 +1570,8 @@ uint8_t scd4x_set_automatic_self_calibration_initial_period(scd4x_handle_t *hand
 
 /**
  * @brief      get automatic self calibration initial period
- * @param[in]  *handle points to an scd4x handle structure
- * @param[out] *hour points to an hour buffer
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[out] *hour pointer to an hour buffer
  * @return     status code
  *             - 0 success
  *             - 1 get automatic self calibration initial period failed
@@ -1621,8 +1621,8 @@ uint8_t scd4x_get_automatic_self_calibration_initial_period(scd4x_handle_t *hand
 
 /**
  * @brief     set automatic self calibration standard period
- * @param[in] *handle points to an scd4x handle structure
- * @param[in] hour is the set hour
+ * @param[in] *handle pointer to an scd4x handle structure
+ * @param[in] hour set hour
  * @return    status code
  *            - 0 success
  *            - 1 set automatic self calibration standard period failed
@@ -1675,8 +1675,8 @@ uint8_t scd4x_set_automatic_self_calibration_standard_period(scd4x_handle_t *han
 
 /**
  * @brief      get automatic self calibration standard period
- * @param[in]  *handle points to an scd4x handle structure
- * @param[out] *hour points to an hour buffer
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[out] *hour pointer to an hour buffer
  * @return     status code
  *             - 0 success
  *             - 1 get automatic self calibration standard period failed
@@ -1726,7 +1726,7 @@ uint8_t scd4x_get_automatic_self_calibration_standard_period(scd4x_handle_t *han
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to an scd4x handle structure
+ * @param[in] *handle pointer to an scd4x handle structure
  * @return    status code
  *            - 0 success
  *            - 1 iic initialization failed
@@ -1788,7 +1788,7 @@ uint8_t scd4x_init(scd4x_handle_t *handle)
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to an scd4x handle structure
+ * @param[in] *handle pointer to an scd4x handle structure
  * @return    status code
  *            - 0 success
  *            - 1 iic deinit failed
@@ -1830,10 +1830,10 @@ uint8_t scd4x_deinit(scd4x_handle_t *handle)
 
 /**
  * @brief     set the chip register
- * @param[in] *handle points to an scd4x handle structure
- * @param[in] reg is the iic register address
- * @param[in] *buf points to a data buffer
- * @param[in] len is the data buffer length
+ * @param[in] *handle pointer to an scd4x handle structure
+ * @param[in] reg iic register address
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len data buffer length
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -1857,11 +1857,11 @@ uint8_t scd4x_set_reg(scd4x_handle_t *handle, uint16_t reg, uint8_t *buf, uint16
 
 /**
  * @brief      get the chip register
- * @param[in]  *handle points to an scd4x handle structure
- * @param[in]  reg is the iic register address
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the data buffer length
- * @param[in]  delay_ms is the delay time in ms
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[in]  reg iic register address
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len data buffer length
+ * @param[in]  delay_ms delay time in ms
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -1885,7 +1885,7 @@ uint8_t scd4x_get_reg(scd4x_handle_t *handle, uint16_t reg, uint8_t *buf, uint16
 
 /**
  * @brief      get chip information
- * @param[out] *info points to an scd4x info structure
+ * @param[out] *info pointer to an scd4x info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL

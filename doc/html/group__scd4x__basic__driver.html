@@ -347,9 +347,9 @@ Functions</h2></td></tr>
 <p>convert the register raw data to the ambient pressure </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>is the register raw data </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*pa</td><td>points to a pa buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>register raw data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*pa</td><td>pointer to a pa buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -400,9 +400,9 @@ Functions</h2></td></tr>
 <p>convert the ambient pressure to the register raw data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pa</td><td>is the set pa </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>points to a register raw buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pa</td><td>set pa </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>pointer to a register raw buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -453,9 +453,9 @@ Functions</h2></td></tr>
 <p>convert the register raw data to the co2 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>is the register raw data </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*ppm</td><td>points to a ppm buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>register raw data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*ppm</td><td>pointer to a ppm buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -506,9 +506,9 @@ Functions</h2></td></tr>
 <p>convert the co2 to the register raw data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ppm</td><td>is the set ppm </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>points to a register raw buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ppm</td><td>set ppm </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>pointer to a register raw buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -543,7 +543,7 @@ Functions</h2></td></tr>
 <p>close the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -590,8 +590,8 @@ Functions</h2></td></tr>
 <p>get ambient pressure </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*pressure</td><td>points to a pressure buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*pressure</td><td>pointer to a pressure buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -638,8 +638,8 @@ Functions</h2></td></tr>
 <p>get automatic self calibration status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -686,8 +686,8 @@ Functions</h2></td></tr>
 <p>get data ready status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -734,8 +734,8 @@ Functions</h2></td></tr>
 <p>get sensor altitude </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*altitude</td><td>points to an altitude buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*altitude</td><td>pointer to an altitude buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -782,8 +782,8 @@ Functions</h2></td></tr>
 <p>get serial number </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*number</td><td>points to a number buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*number</td><td>pointer to a number buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -830,8 +830,8 @@ Functions</h2></td></tr>
 <p>get temperature offset </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*offset</td><td>points to a temperature offset buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*offset</td><td>pointer to a temperature offset buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -878,8 +878,8 @@ Functions</h2></td></tr>
 <p>get type </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*type</td><td>points to a chip type buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*type</td><td>pointer to a chip type buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -913,7 +913,7 @@ Functions</h2></td></tr>
 <p>get chip information </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*info</td><td>points to an scd4x info structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*info</td><td>pointer to an scd4x info structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -947,7 +947,7 @@ Functions</h2></td></tr>
 <p>initialize the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -983,7 +983,7 @@ Functions</h2></td></tr>
 <p>perform factory reset </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1035,9 +1035,9 @@ Functions</h2></td></tr>
 <p>perform forced recalibration </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">co2_raw</td><td>is the co2 raw data </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*frc</td><td>points to a frc buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">co2_raw</td><td>co2 raw data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*frc</td><td>pointer to a frc buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1084,8 +1084,8 @@ Functions</h2></td></tr>
 <p>perform self test </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*malfunction_detected</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*malfunction_detected</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1122,7 +1122,7 @@ Functions</h2></td></tr>
 <p>persist settings </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1198,13 +1198,13 @@ Functions</h2></td></tr>
 <p>read data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*co2_raw</td><td>points to a co2 raw buffer </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*co2_ppm</td><td>points to a co2 ppm buffer </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*temperature_raw</td><td>points to a temperature raw buffer </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*temperature_s</td><td>points to a temperature buffer </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*humidity_raw</td><td>points to a humidity raw buffer </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*humidity_s</td><td>points to a humidity buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*co2_raw</td><td>pointer to a co2 raw buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*co2_ppm</td><td>pointer to a co2 ppm buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*temperature_raw</td><td>pointer to a temperature raw buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*temperature_s</td><td>pointer to a temperature buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*humidity_raw</td><td>pointer to a humidity raw buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*humidity_s</td><td>pointer to a humidity buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1242,7 +1242,7 @@ Functions</h2></td></tr>
 <p>reinit </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1294,9 +1294,9 @@ Functions</h2></td></tr>
 <p>convert the register raw data to the sensor altitude </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>is the register raw data </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*m</td><td>points to an m buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>register raw data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*m</td><td>pointer to an m buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1347,9 +1347,9 @@ Functions</h2></td></tr>
 <p>convert the sensor altitude to the register raw data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>is the set m </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>points to a register raw buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>set m </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>pointer to a register raw buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1394,8 +1394,8 @@ Functions</h2></td></tr>
 <p>set ambient pressure </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pressure</td><td>is the set pressure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pressure</td><td>set pressure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1441,8 +1441,8 @@ Functions</h2></td></tr>
 <p>enable or disable automatic self calibration </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -1488,8 +1488,8 @@ Functions</h2></td></tr>
 <p>set sensor altitude </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">altitude</td><td>is the set altitude </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">altitude</td><td>set altitude </td></tr>
   </table>
   </dd>
 </dl>
@@ -1535,8 +1535,8 @@ Functions</h2></td></tr>
 <p>set temperature offset </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>is the temperature offset </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>temperature offset </td></tr>
   </table>
   </dd>
 </dl>
@@ -1582,8 +1582,8 @@ Functions</h2></td></tr>
 <p>set type </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>is the chip type </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>chip type </td></tr>
   </table>
   </dd>
 </dl>
@@ -1617,7 +1617,7 @@ Functions</h2></td></tr>
 <p>start low power periodic measurement </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1653,7 +1653,7 @@ Functions</h2></td></tr>
 <p>start periodic measurement </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1689,7 +1689,7 @@ Functions</h2></td></tr>
 <p>stop periodic measurement </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1741,9 +1741,9 @@ Functions</h2></td></tr>
 <p>convert the register raw data to the temperature offset </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>is the register raw data </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*degrees</td><td>points to a temperature offset buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>register raw data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*degrees</td><td>pointer to a temperature offset buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1794,9 +1794,9 @@ Functions</h2></td></tr>
 <p>convert the temperature offset to the register raw data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an scd4x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">degrees</td><td>is the degrees </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>points to a register raw buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">degrees</td><td>set degrees </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>pointer to a register raw buffer </td></tr>
   </table>
   </dd>
 </dl>
