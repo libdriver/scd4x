@@ -10,7 +10,7 @@
 
 The SCD4x is Sensirion’s next generation miniature CO2 sensor. This sensor builds on the photoacoustic NDIR sensing principle and Sensirion’s patented PASens® and CMOSens® technology to offer high accuracy at an unmatched price and smallest form factor. SMD assembly allows cost- and space-effective integration of the sensor combined with maximal freedom of design. On-chip signal compensation is realized with the built-in SHT4x humidity and temperature sensor.CO2 is a key indicator for indoor air quality (IAQ) as high levels compromise humans’ cognitive performance and well-being. The SCD4x enables smart ventilation systems to regulate ventilation in the most energy-efficient and human-friendly way. Moreover, indoor air quality monitors and other connected devices based on the SCD4x can help maintain low CO2 concentration for a healthy, productive environment.
 
-LibDriver SCD4X is a full function driver of SCD4X launched by LibDriver.It provides CO2 reading, temperature reading, humidity reading and other functions. LibDriver is MISRA compliant.
+LibDriver SCD4X is a full-featured driver of SCD4X launched by LibDriver.It provides CO2 reading, temperature reading, humidity reading and other functions. LibDriver is MISRA compliant.
 
 ### Table of Contents
 
