@@ -129,9 +129,9 @@ find_package(scd4x REQUIRED)
 
 10. Run scd4x number function.
 
-   ```shell
+    ```shell
    scd4x (-e number | --example=number) [--type=<SCD40 | SCD41>]
-   ```
+    ```
 
 #### 3.2 Command Example
 

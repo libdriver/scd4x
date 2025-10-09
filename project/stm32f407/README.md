@@ -96,9 +96,9 @@ We use '\n' to wrap lines.If your serial port assistant displays exceptions (e.g
 
 10. Run scd4x number function.
 
-   ```shell
+    ```shell
    scd4x (-e number | --example=number) [--type=<SCD40 | SCD41>]
-   ```
+    ```
 
 #### 3.2 Command Example
 

@@ -1779,7 +1779,7 @@ uint8_t scd4x_init(scd4x_handle_t *handle)
     {
         handle->debug_print("scd4x: iic init failed.\n");                    /* iic init failed */
     
-        return 3;                                                            /* return error */
+        return 1;                                                            /* return error */
     }
     handle->inited = 1;                                                      /* flag finish initialization */
   
