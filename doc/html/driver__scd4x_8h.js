@@ -15,7 +15,8 @@ var driver__scd4x_8h =
     ] ],
     [ "scd4x_t", "group__scd4x__basic__driver.html#gad7a030dc642b22411672591e73b40137", [
       [ "SCD40", "group__scd4x__basic__driver.html#ggad7a030dc642b22411672591e73b40137a6519db054854c3331da041608a8117a4", null ],
-      [ "SCD41", "group__scd4x__basic__driver.html#ggad7a030dc642b22411672591e73b40137a4e83b8b73d944b4f079bdb11171ac84e", null ]
+      [ "SCD41", "group__scd4x__basic__driver.html#ggad7a030dc642b22411672591e73b40137a4e83b8b73d944b4f079bdb11171ac84e", null ],
+      [ "SCD43", "group__scd4x__basic__driver.html#ggad7a030dc642b22411672591e73b40137a88557693e61aa3233a021f77ac17a075", null ]
     ] ],
     [ "scd4x_ambient_pressure_convert_to_data", "group__scd4x__basic__driver.html#gab46edf8d2ddbf20010a3f52bc24ffbf6", null ],
     [ "scd4x_ambient_pressure_convert_to_register", "group__scd4x__basic__driver.html#ga72ccb16bec6cbd794d5ec0b78a46002e", null ],

@@ -1,3 +1,9 @@
+## 1.0.7 (2025-10-12)
+
+## Features
+
+- add scd43 support
+
 ## 1.0.6 (2025-10-10)
 
 ## Bug Fixes

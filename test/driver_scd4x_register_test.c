@@ -460,8 +460,8 @@ uint8_t scd4x_register_test(scd4x_t type)
     }
     scd4x_interface_debug_print("scd4x: check perform forced recalibration 0x%04X.\n", reg_check);
     
-    /* scd41 test */
-    if (type == SCD41)
+    /* scd41 && scd43 test */
+    if (type != SCD40)
     {
         /* scd4x_power_down/scd4x_wake_up test */
         scd4x_interface_debug_print("scd4x: scd4x_power_down/scd4x_wake_up test.\n");

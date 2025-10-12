@@ -63,6 +63,7 @@ typedef enum
 {
     SCD40 = 0x00,        /**< scd40 */
     SCD41 = 0x01,        /**< scd41 */
+    SCD43 = 0x02,        /**< scd43 */
 } scd4x_t;
 
 /**
@@ -622,7 +623,7 @@ uint8_t scd4x_reinit(scd4x_handle_t *handle);
  *            - 1 measure single shot failed
  *            - 2 handle is NULL
  *            - 3 handle is not initialized
- *            - 4 only scd41 has this function
+ *            - 4 only scd41 and scd43 has this function
  * @note      none
  */
 uint8_t scd4x_measure_single_shot(scd4x_handle_t *handle);
@@ -635,7 +636,7 @@ uint8_t scd4x_measure_single_shot(scd4x_handle_t *handle);
  *            - 1 measure single shot rht only failed
  *            - 2 handle is NULL
  *            - 3 handle is not initialized
- *            - 4 only scd41 has this function
+ *            - 4 only scd41 and scd43 has this function
  * @note      none
  */
 uint8_t scd4x_measure_single_shot_rht_only(scd4x_handle_t *handle);
@@ -648,7 +649,7 @@ uint8_t scd4x_measure_single_shot_rht_only(scd4x_handle_t *handle);
  *            - 1 power down failed
  *            - 2 handle is NULL
  *            - 3 handle is not initialized
- *            - 4 only scd41 has this function
+ *            - 4 only scd41 and scd43 has this function
  * @note      none
  */
 uint8_t scd4x_power_down(scd4x_handle_t *handle);
@@ -661,7 +662,7 @@ uint8_t scd4x_power_down(scd4x_handle_t *handle);
  *            - 1 wake up failed
  *            - 2 handle is NULL
  *            - 3 handle is not initialized
- *            - 4 only scd41 has this function
+ *            - 4 only scd41 and scd43 has this function
  * @note      none
  */
 uint8_t scd4x_wake_up(scd4x_handle_t *handle);
@@ -675,7 +676,7 @@ uint8_t scd4x_wake_up(scd4x_handle_t *handle);
  *            - 1 set automatic self calibration initial period failed
  *            - 2 handle is NULL
  *            - 3 handle is not initialized
- *            - 4 only scd41 has this function
+ *            - 4 only scd41 and scd43 has this function
  *            - 5 hour is not integer multiples of 4
  * @note      none
  */
@@ -690,7 +691,7 @@ uint8_t scd4x_set_automatic_self_calibration_initial_period(scd4x_handle_t *hand
  *             - 1 get automatic self calibration initial period failed
  *             - 2 handle is NULL
  *             - 3 handle is not initialized
- *             - 4 only scd41 has this function
+ *             - 4 only scd41 and scd43 has this function
  *             - 5 crc is error
  * @note       none
  */
@@ -705,7 +706,7 @@ uint8_t scd4x_get_automatic_self_calibration_initial_period(scd4x_handle_t *hand
  *            - 1 set automatic self calibration standard period failed
  *            - 2 handle is NULL
  *            - 3 handle is not initialized
- *            - 4 only scd41 has this function
+ *            - 4 only scd41 and scd43 has this function
  *            - 5 hour is not integer multiples of 4
  * @note      none
  */
@@ -720,7 +721,7 @@ uint8_t scd4x_set_automatic_self_calibration_standard_period(scd4x_handle_t *han
  *             - 1 get automatic self calibration standard period failed
  *             - 2 handle is NULL
  *             - 3 handle is not initialized
- *             - 4 only scd41 has this function
+ *             - 4 only scd41 and scd43 has this function
  *             - 5 crc is error
  * @note       none
  */
