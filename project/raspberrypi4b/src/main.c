@@ -160,6 +160,10 @@ uint8_t scd4x(uint8_t argc, char **argv)
                 {
                     chip_type = SCD41;
                 }
+                else if (strcmp(optarg, "SCD43") == 0)
+                {
+                    chip_type = SCD43;
+                }
                 else
                 {
                     return 5;
@@ -388,13 +392,13 @@ uint8_t scd4x(uint8_t argc, char **argv)
         scd4x_interface_debug_print("  scd4x (-i | --information)\n");
         scd4x_interface_debug_print("  scd4x (-h | --help)\n");
         scd4x_interface_debug_print("  scd4x (-p | --port)\n");
-        scd4x_interface_debug_print("  scd4x (-t reg | --test=reg) [--type=<SCD40 | SCD41>]\n");
-        scd4x_interface_debug_print("  scd4x (-t read | --test=read) [--type=<SCD40 | SCD41>] [--times=<num>]\n");
-        scd4x_interface_debug_print("  scd4x (-e read | --example=read) [--type=<SCD40 | SCD41>] [--times=<num>]\n");
-        scd4x_interface_debug_print("  scd4x (-e shot | --example=shot) [--type=<SCD40 | SCD41>] [--times=<num>]\n");
-        scd4x_interface_debug_print("  scd4x (-e wake-up | --example=wake-up) [--type=<SCD40 | SCD41>]\n");
-        scd4x_interface_debug_print("  scd4x (-e power-down | --example=power-down) [--type=<SCD40 | SCD41>]\n");
-        scd4x_interface_debug_print("  scd4x (-e number | --example=number) [--type=<SCD40 | SCD41>]\n");
+        scd4x_interface_debug_print("  scd4x (-t reg | --test=reg) [--type=<SCD40 | SCD41 | SCD43>]\n");
+        scd4x_interface_debug_print("  scd4x (-t read | --test=read) [--type=<SCD40 | SCD41 | SCD43>] [--times=<num>]\n");
+        scd4x_interface_debug_print("  scd4x (-e read | --example=read) [--type=<SCD40 | SCD41 | SCD43>] [--times=<num>]\n");
+        scd4x_interface_debug_print("  scd4x (-e shot | --example=shot) [--type=<SCD40 | SCD41 | SCD43>] [--times=<num>]\n");
+        scd4x_interface_debug_print("  scd4x (-e wake-up | --example=wake-up) [--type=<SCD40 | SCD41 | SCD43>]\n");
+        scd4x_interface_debug_print("  scd4x (-e power-down | --example=power-down) [--type=<SCD40 | SCD41 | SCD43>]\n");
+        scd4x_interface_debug_print("  scd4x (-e number | --example=number) [--type=<SCD40 | SCD41 | SCD43>]\n");
         scd4x_interface_debug_print("\n");
         scd4x_interface_debug_print("Options:\n");
         scd4x_interface_debug_print("  -e <read | shot | wake-up | power-down | number>, --example=<read | shot | wake-up | power-down | number>\n");
@@ -405,7 +409,7 @@ uint8_t scd4x(uint8_t argc, char **argv)
         scd4x_interface_debug_print("  -t <reg | read>, --test=<reg | read>\n");
         scd4x_interface_debug_print("                        Run the driver test.\n");
         scd4x_interface_debug_print("      --times=<num>     Set the running times.([default: 3])\n");
-        scd4x_interface_debug_print("      --type=<SCD40 | SCD41>\n");
+        scd4x_interface_debug_print("      --type=<SCD40 | SCD41 | SCD43>\n");
         scd4x_interface_debug_print("                        Set the chip type.([default: SCD41])\n");
         
         return 0;

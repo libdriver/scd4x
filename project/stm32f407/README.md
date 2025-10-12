@@ -61,43 +61,43 @@ We use '\n' to wrap lines.If your serial port assistant displays exceptions (e.g
 4. Run scd4x register test.
 
    ```shell
-   scd4x (-t reg | --test=reg) [--type=<SCD40 | SCD41>]
+   scd4x (-t reg | --test=reg) [--type=<SCD40 | SCD41 | SCD43>]
    ```
 
 5. Run scd4x read test, num is test times.
 
    ```shell
-   scd4x (-t read | --test=read) [--type=<SCD40 | SCD41>] [--times=<num>]
+   scd4x (-t read | --test=read) [--type=<SCD40 | SCD41 | SCD43>] [--times=<num>]
    ```
 
 6. Run scd4x read function, num is read times.
 
    ```shell
-   scd4x (-e read | --example=read) [--type=<SCD40 | SCD41>] [--times=<num>]
+   scd4x (-e read | --example=read) [--type=<SCD40 | SCD41 | SCD43>] [--times=<num>]
    ```
 
 7. Run scd4x shot function, num is read times.
 
    ```shell
-   scd4x (-e shot | --example=shot) [--type=<SCD40 | SCD41>] [--times=<num>]
+   scd4x (-e shot | --example=shot) [--type=<SCD40 | SCD41 | SCD43>] [--times=<num>]
    ```
 
 8. Run scd4x wake up function.
 
    ```shell
-   scd4x (-e wake-up | --example=wake-up) [--type=<SCD40 | SCD41>]
+   scd4x (-e wake-up | --example=wake-up) [--type=<SCD40 | SCD41 | SCD43>]
    ```
 
 9. Run scd4x power down function.
 
    ```shell
-   scd4x (-e power-down | --example=power-down) [--type=<SCD40 | SCD41>]
+   scd4x (-e power-down | --example=power-down) [--type=<SCD40 | SCD41 | SCD43>]
    ```
 
 10. Run scd4x number function.
 
     ```shell
-   scd4x (-e number | --example=number) [--type=<SCD40 | SCD41>]
+   scd4x (-e number | --example=number) [--type=<SCD40 | SCD41 | SCD43>]
     ```
 
 #### 3.2 Command Example
@@ -302,13 +302,13 @@ Usage:
   scd4x (-i | --information)
   scd4x (-h | --help)
   scd4x (-p | --port)
-  scd4x (-t reg | --test=reg) [--type=<SCD40 | SCD41>]
-  scd4x (-t read | --test=read) [--type=<SCD40 | SCD41>] [--times=<num>]
-  scd4x (-e read | --example=read) [--type=<SCD40 | SCD41>] [--times=<num>]
-  scd4x (-e shot | --example=shot) [--type=<SCD40 | SCD41>] [--times=<num>]
-  scd4x (-e wake-up | --example=wake-up) [--type=<SCD40 | SCD41>]
-  scd4x (-e power-down | --example=power-down) [--type=<SCD40 | SCD41>]
-  scd4x (-e number | --example=number) [--type=<SCD40 | SCD41>]
+  scd4x (-t reg | --test=reg) [--type=<SCD40 | SCD41 | SCD43>]
+  scd4x (-t read | --test=read) [--type=<SCD40 | SCD41 | SCD43>] [--times=<num>]
+  scd4x (-e read | --example=read) [--type=<SCD40 | SCD41 | SCD43>] [--times=<num>]
+  scd4x (-e shot | --example=shot) [--type=<SCD40 | SCD41 | SCD43>] [--times=<num>]
+  scd4x (-e wake-up | --example=wake-up) [--type=<SCD40 | SCD41 | SCD43>]
+  scd4x (-e power-down | --example=power-down) [--type=<SCD40 | SCD41 | SCD43>]
+  scd4x (-e number | --example=number) [--type=<SCD40 | SCD41 | SCD43>]
 
 Options:
   -e <read | shot | wake-up | power-down | number>, --example=<read | shot | wake-up | power-down | number>
@@ -319,7 +319,7 @@ Options:
   -t <reg | read>, --test=<reg | read>
                         Run the driver test.
       --times=<num>     Set the running times.([default: 3])
-      --type=<SCD40 | SCD41>
+      --type=<SCD40 | SCD41 | SCD43>
                         Set the chip type.([default: SCD41])
 ```
 

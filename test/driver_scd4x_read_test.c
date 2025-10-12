@@ -213,8 +213,8 @@ uint8_t scd4x_read_test(scd4x_t type, uint32_t times)
         return 1;
     }
     
-    /* only scd41 */
-    if (type == SCD41)
+    /* scd41 && scd43 */
+    if (type != SCD40)
     {
         uint32_t timeout;
         scd4x_bool_t enable;
