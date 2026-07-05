@@ -83,6 +83,9 @@
 #define SCD4X_COMMAND_GET_AUTO_SELF_CALIBRATION_INIT_PERIOD         0x2340U        /**< get automatic self calibration initial period command */
 #define SCD4X_COMMAND_SET_AUTO_SELF_CALIBRATION_STANDARD_PERIOD     0x244EU        /**< set automatic self calibration standard period command */
 #define SCD4X_COMMAND_GET_AUTO_SELF_CALIBRATION_STANDARD_PERIOD     0x234BU        /**< get automatic self calibration standard period command */
+#define SCD4X_COMMAND_SET_AUTOMATIC_SELF_CALIBRATION_TARGET         0x243AU        /**< set automatic self calibration target command */
+#define SCD4X_COMMAND_GET_AUTOMATIC_SELF_CALIBRATION_TARGET         0x233FU        /**< get automatic self calibration target command */
+#define SCD4X_COMMAND_GET_SENSOR_VARIANT                            0x202FU        /**< get sensor variant command */
 
 /**
  * @brief crc8 definition
@@ -366,7 +369,7 @@ uint8_t scd4x_read(scd4x_handle_t *handle, uint16_t *co2_raw, uint16_t *co2_ppm,
         return 4;                                                                         /* return error */
     }
     prev = (uint16_t)(((uint16_t)buf[0]) << 8) | buf[1];                                  /* set prev */
-    if ((prev & 0x0FFF) == 0)                                                             /* check data */
+    if ((prev & 0x07FF) == 0)                                                             /* check data */
     {
         handle->debug_print("scd4x: data is not ready.\n");                               /* data is not ready */
        
@@ -1126,7 +1129,7 @@ uint8_t scd4x_get_data_ready_status(scd4x_handle_t *handle, scd4x_bool_t *enable
         return 4;                                                                         /* return error */
     }
     prev = (uint16_t)(((uint16_t)buf[0]) << 8) | buf[1];                                  /* set prev */
-    if ((prev & 0x0FFF) != 0)                                                             /* check data */
+    if ((prev & 0x07FF) != 0)                                                             /* check data */
     {
         *enable = SCD4X_BOOL_TRUE;                                                        /* ready */
     }
@@ -1725,6 +1728,136 @@ uint8_t scd4x_get_automatic_self_calibration_standard_period(scd4x_handle_t *han
 }
 
 /**
+ * @brief     set automatic self calibration target
+ * @param[in] *handle pointer to an scd4x handle structure
+ * @param[in] co2_ppm co2 in ppm
+ * @return    status code
+ *            - 0 success
+ *            - 1 set automatic self calibration target failed
+ *            - 2 handle is NULL
+ *            - 3 handle is not initialized
+ * @note      none
+ */
+uint8_t scd4x_set_automatic_self_calibration_target(scd4x_handle_t *handle, uint16_t co2_ppm)
+{
+    uint8_t res;
+    uint8_t buf[3];
+    
+    if (handle == NULL)                                                                                  /* check handle */
+    {
+        return 2;                                                                                        /* return error */
+    }
+    if (handle->inited != 1)                                                                             /* check handle initialization */
+    {
+        return 3;                                                                                        /* return error */
+    }
+    
+    buf[0] = (co2_ppm >> 8) & 0xFF;                                                                      /* msb */
+    buf[1] = (co2_ppm >> 0) & 0xFF;                                                                      /* lsb */
+    buf[2] = a_scd4x_generate_crc(&buf[0], 2);                                                           /* crc */
+    res = a_scd4x_iic_write(handle, SCD4X_COMMAND_SET_AUTOMATIC_SELF_CALIBRATION_TARGET, buf, 3);        /* write config */
+    if (res != 0)                                                                                        /* check result */
+    {
+        handle->debug_print("scd4x: set automatic self calibration target failed.\n");                   /* set automatic self calibration target failed */
+       
+        return 1;                                                                                        /* return error */
+    }
+    handle->delay_ms(1);                                                                                 /* delay 1ms */
+    
+    return 0;                                                                                            /* success return 0 */
+}
+
+/**
+ * @brief      get automatic self calibration target
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[out] *co2_ppm pointer to a ppm buffer
+ * @return     status code
+ *             - 0 success
+ *             - 1 get automatic self calibration target failed
+ *             - 2 handle is NULL
+ *             - 3 handle is not initialized
+ *             - 4 crc is error
+ * @note       none
+ */
+uint8_t scd4x_get_automatic_self_calibration_target(scd4x_handle_t *handle, uint16_t *co2_ppm)
+{
+    uint8_t res;
+    uint8_t buf[3];
+    
+    if (handle == NULL)                                                                                    /* check handle */
+    {
+        return 2;                                                                                          /* return error */
+    }
+    if (handle->inited != 1)                                                                               /* check handle initialization */
+    {
+        return 3;                                                                                          /* return error */
+    }
+    
+    res = a_scd4x_iic_read(handle, SCD4X_COMMAND_GET_AUTOMATIC_SELF_CALIBRATION_TARGET, buf, 3, 1);        /* read config */
+    if (res != 0)                                                                                          /* check result */
+    {
+        handle->debug_print("scd4x: get automatic self calibration target failed.\n");                     /* get automatic self calibration target failed */
+       
+        return 1;                                                                                          /* return error */
+    }
+    if (buf[2] != a_scd4x_generate_crc(&buf[0], 2))                                                        /* check crc */
+    {
+        handle->debug_print("scd4x: crc is error.\n");                                                     /* crc is error */
+       
+        return 4;                                                                                          /* return error */
+    }
+    *co2_ppm = (uint16_t)(((uint16_t)buf[0]) << 8) | buf[1];                                               /* set co2 ppm */
+    
+    return 0;                                                                                              /* success return 0 */
+}
+
+/**
+ * @brief      get sensor variant
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[out] *variant pointer to a variant buffer
+ * @return     status code
+ *             - 0 success
+ *             - 1 get sensor variant failed
+ *             - 2 handle is NULL
+ *             - 3 handle is not initialized
+ *             - 4 crc is error
+ * @note       bits[15...12] = 0000 scd40
+ *             bits[15...12] = 0001 scd41
+ *             bits[15...12] = 0101 scd43
+ */
+uint8_t scd4x_get_sensor_variant(scd4x_handle_t *handle, uint16_t *variant)
+{
+    uint8_t res;
+    uint8_t buf[3];
+    
+    if (handle == NULL)                                                                 /* check handle */
+    {
+        return 2;                                                                       /* return error */
+    }
+    if (handle->inited != 1)                                                            /* check handle initialization */
+    {
+        return 3;                                                                       /* return error */
+    }
+    
+    res = a_scd4x_iic_read(handle, SCD4X_COMMAND_GET_SENSOR_VARIANT, buf, 3, 1);        /* read config */
+    if (res != 0)                                                                       /* check result */
+    {
+        handle->debug_print("scd4x: get sensor variant failed.\n");                     /* get sensor variant failed */
+       
+        return 1;                                                                       /* return error */
+    }
+    if (buf[2] != a_scd4x_generate_crc(&buf[0], 2))                                     /* check crc */
+    {
+        handle->debug_print("scd4x: crc is error.\n");                                  /* crc is error */
+       
+        return 4;                                                                       /* return error */
+    }
+    *variant = (uint16_t)(((uint16_t)buf[0]) << 8) | buf[1];                            /* set variant */
+    
+    return 0;                                                                           /* success return 0 */
+}
+
+/**
  * @brief     initialize the chip
  * @param[in] *handle pointer to an scd4x handle structure
  * @return    status code
@@ -1817,6 +1950,7 @@ uint8_t scd4x_deinit(scd4x_handle_t *handle)
        
         return 4;                                                                 /* return error */
     }
+    handle->delay_ms(500);                                                        /* delay 500ms */
     if (handle->iic_deinit() != 0)                                                /* iic deinit */
     {
         handle->debug_print("scd4x: iic close failed.\n");                        /* iic close failed */
