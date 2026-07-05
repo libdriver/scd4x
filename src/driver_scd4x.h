@@ -728,6 +728,49 @@ uint8_t scd4x_set_automatic_self_calibration_standard_period(scd4x_handle_t *han
 uint8_t scd4x_get_automatic_self_calibration_standard_period(scd4x_handle_t *handle, uint16_t *hour);
 
 /**
+ * @brief     set automatic self calibration target
+ * @param[in] *handle pointer to an scd4x handle structure
+ * @param[in] co2_ppm co2 in ppm
+ * @return    status code
+ *            - 0 success
+ *            - 1 set automatic self calibration target failed
+ *            - 2 handle is NULL
+ *            - 3 handle is not initialized
+ * @note      none
+ */
+uint8_t scd4x_set_automatic_self_calibration_target(scd4x_handle_t *handle, uint16_t co2_ppm);
+
+/**
+ * @brief      get automatic self calibration target
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[out] *co2_ppm pointer to a ppm buffer
+ * @return     status code
+ *             - 0 success
+ *             - 1 get automatic self calibration target failed
+ *             - 2 handle is NULL
+ *             - 3 handle is not initialized
+ *             - 4 crc is error
+ * @note       none
+ */
+uint8_t scd4x_get_automatic_self_calibration_target(scd4x_handle_t *handle, uint16_t *co2_ppm);
+
+/**
+ * @brief      get sensor variant
+ * @param[in]  *handle pointer to an scd4x handle structure
+ * @param[out] *variant pointer to a variant buffer
+ * @return     status code
+ *             - 0 success
+ *             - 1 get sensor variant failed
+ *             - 2 handle is NULL
+ *             - 3 handle is not initialized
+ *             - 4 crc is error
+ * @note       bits[15...12] = 0000 scd40
+ *             bits[15...12] = 0001 scd41
+ *             bits[15...12] = 0101 scd43
+ */
+uint8_t scd4x_get_sensor_variant(scd4x_handle_t *handle, uint16_t *variant);
+
+/**
  * @}
  */
 

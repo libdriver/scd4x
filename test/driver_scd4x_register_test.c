@@ -460,6 +460,43 @@ uint8_t scd4x_register_test(scd4x_t type)
     }
     scd4x_interface_debug_print("scd4x: check perform forced recalibration 0x%04X.\n", reg_check);
     
+    /* scd4x_set_automatic_self_calibration_target/scd4x_get_automatic_self_calibration_target test */
+    scd4x_interface_debug_print("scd4x: scd4x_set_automatic_self_calibration_target/scd4x_get_automatic_self_calibration_target test.\n");
+    
+    reg = rand() % 0xFFFFU;
+    res = scd4x_set_automatic_self_calibration_target(&gs_handle, reg);
+    if (res != 0)
+    {
+        scd4x_interface_debug_print("scd4x: set automatic self calibration target failed.\n");
+        (void)scd4x_deinit(&gs_handle);
+        
+        return 1;
+    }
+    scd4x_interface_debug_print("scd4x: set automatic self calibration target 0x%04X.\n", reg);
+    res = scd4x_get_automatic_self_calibration_target(&gs_handle, &reg_check);
+    if (res != 0)
+    {
+        scd4x_interface_debug_print("scd4x: get automatic self calibration target failed.\n");
+        (void)scd4x_deinit(&gs_handle);
+        
+        return 1;
+    }
+    scd4x_interface_debug_print("scd4x: check automatic self calibration target %s.\n", (reg == reg_check) ? "ok" : "error");
+    
+    /* scd4x_get_sensor_variant test */
+    scd4x_interface_debug_print("scd4x: scd4x_get_sensor_variant test.\n");
+    
+    /* get sensor variant */
+    res = scd4x_get_sensor_variant(&gs_handle, &reg_check);
+    if (res != 0)
+    {
+        scd4x_interface_debug_print("scd4x: get sensor variant failed.\n");
+        (void)scd4x_deinit(&gs_handle);
+        
+        return 1;
+    }
+    scd4x_interface_debug_print("scd4x: sensor variant is 0x%04X.\n", reg_check);
+    
     /* scd41 && scd43 test */
     if (type != SCD40)
     {

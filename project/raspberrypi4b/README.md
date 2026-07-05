@@ -130,7 +130,7 @@ find_package(scd4x REQUIRED)
 10. Run scd4x number function.
 
     ```shell
-   scd4x (-e number | --example=number) [--type=<SCD40 | SCD41 | SCD43>]
+       scd4x (-e number | --example=number) [--type=<SCD40 | SCD41 | SCD43>]
     ```
 
 #### 3.2 Command Example
@@ -175,26 +175,26 @@ scd4x: check type ok.
 scd4x: set type scd41.
 scd4x: check type ok.
 scd4x: scd4x_set_temperature_offset/scd4x_get_temperature_offset test.
-scd4x: set temperature offset 45298.
+scd4x: set temperature offset 63223.
 scd4x: check temperature offset ok.
 scd4x: scd4x_temperature_offset_convert_to_register/scd4x_temperature_offset_convert_to_data test.
-scd4x: set temperature 31.00.
-scd4x: check temperature 31.00.
+scd4x: set temperature 32.00.
+scd4x: check temperature 32.00.
 scd4x: scd4x_set_sensor_altitude/scd4x_get_sensor_altitude test.
-scd4x: set sensor altitude 64677.
+scd4x: set sensor altitude 56029.
 scd4x: check sensor altitude ok.
 scd4x: scd4x_sensor_altitude_convert_to_register/scd4x_sensor_altitude_convert_to_data test.
-scd4x: set altitude 105.00.
-scd4x: check altitude 105.00.
+scd4x: set altitude 100.00.
+scd4x: check altitude 100.00.
 scd4x: scd4x_set_ambient_pressure/scd4x_get_ambient_pressure test.
-scd4x: set ambient pressure 20738.
+scd4x: set ambient pressure 1518.
 scd4x: check ambient pressure ok.
 scd4x: scd4x_ambient_pressure_convert_to_register/scd4x_ambient_pressure_convert_to_data test.
-scd4x: set ambient pressure 100335.00.
-scd4x: check ambient pressure 100300.00.
+scd4x: set ambient pressure 100741.00.
+scd4x: check ambient pressure 100700.00.
 scd4x: scd4x_co2_convert_to_register/scd4x_co2_convert_to_data test.
-scd4x: set co2 86.00.
-scd4x: check co2 86.00.
+scd4x: set co2 60.00.
+scd4x: check co2 60.00.
 scd4x: scd4x_set_automatic_self_calibration/scd4x_get_automatic_self_calibration test.
 scd4x: disable automatic self calibration.
 scd4x: check automatic self calibration ok.
@@ -203,7 +203,7 @@ scd4x: check automatic self calibration ok.
 scd4x: scd4x_get_data_ready_status test.
 scd4x: check data ready status not ready.
 scd4x: scd4x_get_serial_number test.
-scd4x: serial number is 0xF2F1CF073B26.
+scd4x: serial number is 0xD1283B073B41.
 scd4x: scd4x_perform_self_test test.
 scd4x: check perform self test ok.
 scd4x: scd4x_perform_factory_reset test.
@@ -214,14 +214,19 @@ scd4x: scd4x_persist_settings test.
 scd4x: check persist settings ok.
 scd4x: scd4x_perform_forced_recalibration test.
 scd4x: check perform forced recalibration 0xFFFF.
+scd4x: scd4x_set_automatic_self_calibration_target/scd4x_get_automatic_self_calibration_target test.
+scd4x: set automatic self calibration target 0xB7CC.
+scd4x: check automatic self calibration target ok.
+scd4x: scd4x_get_sensor_variant test.
+scd4x: sensor variant is 0x1440.
 scd4x: scd4x_power_down/scd4x_wake_up test.
 scd4x: power down.
 scd4x: wake up.
 scd4x: scd4x_set_automatic_self_calibration_initial_period/scd4x_get_automatic_self_calibration_initial_period test.
-scd4x: set automatic self calibration initial period 996.
+scd4x: set automatic self calibration initial period 736.
 scd4x: check automatic self calibration initial period ok.
 scd4x: scd4x_set_automatic_self_calibration_standard_period/scd4x_get_automatic_self_calibration_standard_period test.
-scd4x: set automatic self calibration standard period 484.
+scd4x: set automatic self calibration standard period 852.
 scd4x: check automatic self calibration standard period ok.
 scd4x: finish register test.
 ```

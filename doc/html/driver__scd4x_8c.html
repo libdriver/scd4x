@@ -147,6 +147,9 @@ Macros</h2></td></tr>
 <tr class="memitem:a10fc62f31e0ff01de2b1677676cbbf78" id="r_a10fc62f31e0ff01de2b1677676cbbf78"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10fc62f31e0ff01de2b1677676cbbf78">SCD4X_COMMAND_GET_AUTO_SELF_CALIBRATION_INIT_PERIOD</a>&#160;&#160;&#160;0x2340U</td></tr>
 <tr class="memitem:aba94e2c9a682000147446e89afa9a575" id="r_aba94e2c9a682000147446e89afa9a575"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba94e2c9a682000147446e89afa9a575">SCD4X_COMMAND_SET_AUTO_SELF_CALIBRATION_STANDARD_PERIOD</a>&#160;&#160;&#160;0x244EU</td></tr>
 <tr class="memitem:ab2e7bfbe9d99d448ccf2dab31a6ea40f" id="r_ab2e7bfbe9d99d448ccf2dab31a6ea40f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2e7bfbe9d99d448ccf2dab31a6ea40f">SCD4X_COMMAND_GET_AUTO_SELF_CALIBRATION_STANDARD_PERIOD</a>&#160;&#160;&#160;0x234BU</td></tr>
+<tr class="memitem:ad0263ac859f86e59adbe81b18e6214b9" id="r_ad0263ac859f86e59adbe81b18e6214b9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0263ac859f86e59adbe81b18e6214b9">SCD4X_COMMAND_SET_AUTOMATIC_SELF_CALIBRATION_TARGET</a>&#160;&#160;&#160;0x243AU</td></tr>
+<tr class="memitem:a16ff451f479ad109f8e9c5bdacc2e0a2" id="r_a16ff451f479ad109f8e9c5bdacc2e0a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16ff451f479ad109f8e9c5bdacc2e0a2">SCD4X_COMMAND_GET_AUTOMATIC_SELF_CALIBRATION_TARGET</a>&#160;&#160;&#160;0x233FU</td></tr>
+<tr class="memitem:a1dea1d76eef77931281b29555697dfb4" id="r_a1dea1d76eef77931281b29555697dfb4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1dea1d76eef77931281b29555697dfb4">SCD4X_COMMAND_GET_SENSOR_VARIANT</a>&#160;&#160;&#160;0x202FU</td></tr>
 <tr class="memitem:a218dbd7095e77617102dcd34bfad2bd1" id="r_a218dbd7095e77617102dcd34bfad2bd1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a218dbd7095e77617102dcd34bfad2bd1">SCD4X_CRC8_POLYNOMIAL</a>&#160;&#160;&#160;0x31</td></tr>
 <tr class="memdesc:a218dbd7095e77617102dcd34bfad2bd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">crc8 definition  <br /></td></tr>
 <tr class="memitem:aac951a577e0a0b0cc3e1eb56a0e56426" id="r_aac951a577e0a0b0cc3e1eb56a0e56426"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac951a577e0a0b0cc3e1eb56a0e56426">SCD4X_CRC8_INIT</a>&#160;&#160;&#160;0xFF</td></tr>
@@ -227,6 +230,12 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga31aac7b7fb3a9f19e7c65bb7161cd69e"><td class="mdescLeft">&#160;</td><td class="mdescRight">set automatic self calibration standard period  <br /></td></tr>
 <tr class="memitem:ga9b90c69eba2a8539e4e28a063f3be163" id="r_ga9b90c69eba2a8539e4e28a063f3be163"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__scd4x__advance__driver.html#ga9b90c69eba2a8539e4e28a063f3be163">scd4x_get_automatic_self_calibration_standard_period</a> (<a class="el" href="group__scd4x__basic__driver.html#gaa9f5326f02b12285b45f4ec12da16241">scd4x_handle_t</a> *handle, uint16_t *hour)</td></tr>
 <tr class="memdesc:ga9b90c69eba2a8539e4e28a063f3be163"><td class="mdescLeft">&#160;</td><td class="mdescRight">get automatic self calibration standard period  <br /></td></tr>
+<tr class="memitem:gaccff95a3122bd36a6cafa9ac0219f283" id="r_gaccff95a3122bd36a6cafa9ac0219f283"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__scd4x__advance__driver.html#gaccff95a3122bd36a6cafa9ac0219f283">scd4x_set_automatic_self_calibration_target</a> (<a class="el" href="group__scd4x__basic__driver.html#gaa9f5326f02b12285b45f4ec12da16241">scd4x_handle_t</a> *handle, uint16_t co2_ppm)</td></tr>
+<tr class="memdesc:gaccff95a3122bd36a6cafa9ac0219f283"><td class="mdescLeft">&#160;</td><td class="mdescRight">set automatic self calibration target  <br /></td></tr>
+<tr class="memitem:ga17b593a9d21730bab05e50d2842494d5" id="r_ga17b593a9d21730bab05e50d2842494d5"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__scd4x__advance__driver.html#ga17b593a9d21730bab05e50d2842494d5">scd4x_get_automatic_self_calibration_target</a> (<a class="el" href="group__scd4x__basic__driver.html#gaa9f5326f02b12285b45f4ec12da16241">scd4x_handle_t</a> *handle, uint16_t *co2_ppm)</td></tr>
+<tr class="memdesc:ga17b593a9d21730bab05e50d2842494d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">get automatic self calibration target  <br /></td></tr>
+<tr class="memitem:gad85d7df101f98f0217e7568e3ee849d5" id="r_gad85d7df101f98f0217e7568e3ee849d5"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__scd4x__advance__driver.html#gad85d7df101f98f0217e7568e3ee849d5">scd4x_get_sensor_variant</a> (<a class="el" href="group__scd4x__basic__driver.html#gaa9f5326f02b12285b45f4ec12da16241">scd4x_handle_t</a> *handle, uint16_t *variant)</td></tr>
+<tr class="memdesc:gad85d7df101f98f0217e7568e3ee849d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">get sensor variant  <br /></td></tr>
 <tr class="memitem:ga873aa589ed9fdc270fc35e5523b002fc" id="r_ga873aa589ed9fdc270fc35e5523b002fc"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__scd4x__basic__driver.html#ga873aa589ed9fdc270fc35e5523b002fc">scd4x_init</a> (<a class="el" href="group__scd4x__basic__driver.html#gaa9f5326f02b12285b45f4ec12da16241">scd4x_handle_t</a> *handle)</td></tr>
 <tr class="memdesc:ga873aa589ed9fdc270fc35e5523b002fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize the chip  <br /></td></tr>
 <tr class="memitem:ga1f054162b41924d421d9d50f326c21f4" id="r_ga1f054162b41924d421d9d50f326c21f4"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__scd4x__basic__driver.html#ga1f054162b41924d421d9d50f326c21f4">scd4x_deinit</a> (<a class="el" href="group__scd4x__basic__driver.html#gaa9f5326f02b12285b45f4ec12da16241">scd4x_handle_t</a> *handle)</td></tr>
@@ -415,6 +424,23 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a16ff451f479ad109f8e9c5bdacc2e0a2" name="a16ff451f479ad109f8e9c5bdacc2e0a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16ff451f479ad109f8e9c5bdacc2e0a2">&#9670;&#160;</a></span>SCD4X_COMMAND_GET_AUTOMATIC_SELF_CALIBRATION_TARGET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SCD4X_COMMAND_GET_AUTOMATIC_SELF_CALIBRATION_TARGET&#160;&#160;&#160;0x233FU</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>get automatic self calibration target command </p>
+
+<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l00087">87</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
+
+</div>
+</div>
 <a id="ab43c9e5b9e768836d864cc2281103887" name="ab43c9e5b9e768836d864cc2281103887"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab43c9e5b9e768836d864cc2281103887">&#9670;&#160;</a></span>SCD4X_COMMAND_GET_DATA_READY_STATUS</h2>
 
@@ -446,6 +472,23 @@ Functions</h2></td></tr>
 <p>get sensor altitude command </p>
 
 <p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l00065">65</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
+
+</div>
+</div>
+<a id="a1dea1d76eef77931281b29555697dfb4" name="a1dea1d76eef77931281b29555697dfb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dea1d76eef77931281b29555697dfb4">&#9670;&#160;</a></span>SCD4X_COMMAND_GET_SENSOR_VARIANT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SCD4X_COMMAND_GET_SENSOR_VARIANT&#160;&#160;&#160;0x202FU</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>get sensor variant command </p>
+
+<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l00088">88</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
 
 </div>
 </div>
@@ -704,6 +747,23 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ad0263ac859f86e59adbe81b18e6214b9" name="ad0263ac859f86e59adbe81b18e6214b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0263ac859f86e59adbe81b18e6214b9">&#9670;&#160;</a></span>SCD4X_COMMAND_SET_AUTOMATIC_SELF_CALIBRATION_TARGET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SCD4X_COMMAND_SET_AUTOMATIC_SELF_CALIBRATION_TARGET&#160;&#160;&#160;0x243AU</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>set automatic self calibration target command </p>
+
+<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l00086">86</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
+
+</div>
+</div>
 <a id="a6d5b978185226f3ee08aa1d4dbe3e005" name="a6d5b978185226f3ee08aa1d4dbe3e005"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6d5b978185226f3ee08aa1d4dbe3e005">&#9670;&#160;</a></span>SCD4X_COMMAND_SET_SENSOR_ALTITUDE</h2>
 
@@ -820,7 +880,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l00091">91</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l00094">94</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
 
 </div>
 </div>
@@ -838,7 +898,7 @@ Functions</h2></td></tr>
 
 <p>crc8 definition </p>
 
-<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l00090">90</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l00093">93</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
 
 </div>
 </div>

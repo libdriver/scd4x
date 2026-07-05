@@ -121,6 +121,12 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga31aac7b7fb3a9f19e7c65bb7161cd69e"><td class="mdescLeft">&#160;</td><td class="mdescRight">set automatic self calibration standard period  <br /></td></tr>
 <tr class="memitem:ga9b90c69eba2a8539e4e28a063f3be163" id="r_ga9b90c69eba2a8539e4e28a063f3be163"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9b90c69eba2a8539e4e28a063f3be163">scd4x_get_automatic_self_calibration_standard_period</a> (<a class="el" href="group__scd4x__basic__driver.html#gaa9f5326f02b12285b45f4ec12da16241">scd4x_handle_t</a> *handle, uint16_t *hour)</td></tr>
 <tr class="memdesc:ga9b90c69eba2a8539e4e28a063f3be163"><td class="mdescLeft">&#160;</td><td class="mdescRight">get automatic self calibration standard period  <br /></td></tr>
+<tr class="memitem:gaccff95a3122bd36a6cafa9ac0219f283" id="r_gaccff95a3122bd36a6cafa9ac0219f283"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaccff95a3122bd36a6cafa9ac0219f283">scd4x_set_automatic_self_calibration_target</a> (<a class="el" href="group__scd4x__basic__driver.html#gaa9f5326f02b12285b45f4ec12da16241">scd4x_handle_t</a> *handle, uint16_t co2_ppm)</td></tr>
+<tr class="memdesc:gaccff95a3122bd36a6cafa9ac0219f283"><td class="mdescLeft">&#160;</td><td class="mdescRight">set automatic self calibration target  <br /></td></tr>
+<tr class="memitem:ga17b593a9d21730bab05e50d2842494d5" id="r_ga17b593a9d21730bab05e50d2842494d5"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga17b593a9d21730bab05e50d2842494d5">scd4x_get_automatic_self_calibration_target</a> (<a class="el" href="group__scd4x__basic__driver.html#gaa9f5326f02b12285b45f4ec12da16241">scd4x_handle_t</a> *handle, uint16_t *co2_ppm)</td></tr>
+<tr class="memdesc:ga17b593a9d21730bab05e50d2842494d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">get automatic self calibration target  <br /></td></tr>
+<tr class="memitem:gad85d7df101f98f0217e7568e3ee849d5" id="r_gad85d7df101f98f0217e7568e3ee849d5"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad85d7df101f98f0217e7568e3ee849d5">scd4x_get_sensor_variant</a> (<a class="el" href="group__scd4x__basic__driver.html#gaa9f5326f02b12285b45f4ec12da16241">scd4x_handle_t</a> *handle, uint16_t *variant)</td></tr>
+<tr class="memdesc:gad85d7df101f98f0217e7568e3ee849d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">get sensor variant  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <p>scd4x advance driver modules </p>
@@ -163,7 +169,7 @@ Functions</h2></td></tr>
 </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>none </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l01584">1584</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l01587">1587</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
 
 </div>
 </div>
@@ -205,7 +211,89 @@ Functions</h2></td></tr>
 </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>none </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l01689">1689</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l01692">1692</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
+
+</div>
+</div>
+<a id="ga17b593a9d21730bab05e50d2842494d5" name="ga17b593a9d21730bab05e50d2842494d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga17b593a9d21730bab05e50d2842494d5">&#9670;&#160;</a></span>scd4x_get_automatic_self_calibration_target()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t scd4x_get_automatic_self_calibration_target </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__scd4x__basic__driver.html#gaa9f5326f02b12285b45f4ec12da16241">scd4x_handle_t</a> *</td>          <td class="paramname"><span class="paramname"><em>handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t *</td>          <td class="paramname"><span class="paramname"><em>co2_ppm</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get automatic self calibration target </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*co2_ppm</td><td>pointer to a ppm buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>status code<ul>
+<li>0 success</li>
+<li>1 get automatic self calibration target failed</li>
+<li>2 handle is NULL</li>
+<li>3 handle is not initialized</li>
+<li>4 crc is error </li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>none </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l01782">1782</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
+
+</div>
+</div>
+<a id="gad85d7df101f98f0217e7568e3ee849d5" name="gad85d7df101f98f0217e7568e3ee849d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad85d7df101f98f0217e7568e3ee849d5">&#9670;&#160;</a></span>scd4x_get_sensor_variant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t scd4x_get_sensor_variant </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__scd4x__basic__driver.html#gaa9f5326f02b12285b45f4ec12da16241">scd4x_handle_t</a> *</td>          <td class="paramname"><span class="paramname"><em>handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t *</td>          <td class="paramname"><span class="paramname"><em>variant</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get sensor variant </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*variant</td><td>pointer to a variant buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>status code<ul>
+<li>0 success</li>
+<li>1 get sensor variant failed</li>
+<li>2 handle is NULL</li>
+<li>3 handle is not initialized</li>
+<li>4 crc is error </li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>bits[15...12] = 0000 scd40 bits[15...12] = 0001 scd41 bits[15...12] = 0101 scd43 </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l01828">1828</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
 
 </div>
 </div>
@@ -241,7 +329,7 @@ Functions</h2></td></tr>
 </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>none </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l01368">1368</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l01371">1371</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
 
 </div>
 </div>
@@ -277,7 +365,7 @@ Functions</h2></td></tr>
 </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>none </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l01410">1410</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l01413">1413</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
 
 </div>
 </div>
@@ -313,7 +401,7 @@ Functions</h2></td></tr>
 </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>none </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l01452">1452</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l01455">1455</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
 
 </div>
 </div>
@@ -355,7 +443,7 @@ Functions</h2></td></tr>
 </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>none </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l01530">1530</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l01533">1533</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
 
 </div>
 </div>
@@ -397,7 +485,47 @@ Functions</h2></td></tr>
 </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>none </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l01635">1635</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l01638">1638</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
+
+</div>
+</div>
+<a id="gaccff95a3122bd36a6cafa9ac0219f283" name="gaccff95a3122bd36a6cafa9ac0219f283"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaccff95a3122bd36a6cafa9ac0219f283">&#9670;&#160;</a></span>scd4x_set_automatic_self_calibration_target()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t scd4x_set_automatic_self_calibration_target </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__scd4x__basic__driver.html#gaa9f5326f02b12285b45f4ec12da16241">scd4x_handle_t</a> *</td>          <td class="paramname"><span class="paramname"><em>handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>co2_ppm</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>set automatic self calibration target </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an scd4x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">co2_ppm</td><td>co2 in ppm </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>status code<ul>
+<li>0 success</li>
+<li>1 set automatic self calibration target failed</li>
+<li>2 handle is NULL</li>
+<li>3 handle is not initialized </li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>none </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l01741">1741</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
 
 </div>
 </div>
@@ -433,7 +561,7 @@ Functions</h2></td></tr>
 </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>none </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l01494">1494</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="driver__scd4x_8c_source.html#l01497">1497</a> of file <a class="el" href="driver__scd4x_8c_source.html">driver_scd4x.c</a>.</p>
 
 </div>
 </div>
