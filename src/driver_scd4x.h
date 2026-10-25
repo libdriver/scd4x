@@ -457,6 +457,7 @@ uint8_t scd4x_ambient_pressure_convert_to_data(scd4x_handle_t *handle, uint16_t 
  *             - 2 handle is NULL
  *             - 3 handle is not initialized
  *             - 4 crc is error
+ *             - 5 result is error
  * @note       none
  */
 uint8_t scd4x_perform_forced_recalibration(scd4x_handle_t *handle, uint16_t co2_raw, uint16_t *frc);

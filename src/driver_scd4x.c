@@ -127,12 +127,12 @@ static uint8_t a_scd4x_iic_read_with_param(scd4x_handle_t *handle, uint16_t reg,
     
     if (handle->iic_write_cmd(SCD4X_ADDRESS, (uint8_t *)buf, len + 2) != 0)        /* write iic command */
     {
-        return 1;                                                                  /* write command */
+        return 1;                                                                  /* return error */
     }
     handle->delay_ms(delay_ms);                                                    /* delay ms */
     if (handle->iic_read_cmd(SCD4X_ADDRESS, output, output_len) != 0)              /* read data */
     {
-        return 1;                                                                  /* write command */
+        return 1;                                                                  /* return error */
     }
     else
     {
@@ -166,7 +166,7 @@ static uint8_t a_scd4x_iic_read(scd4x_handle_t *handle, uint16_t reg, uint8_t *d
     handle->delay_ms(delay_ms);                                              /* delay ms */
     if (handle->iic_read_cmd(SCD4X_ADDRESS, data, len) != 0)                 /* read data */
     {
-        return 1;                                                            /* write command */
+        return 1;                                                            /* return error */
     }
     else
     {
@@ -204,7 +204,7 @@ static uint8_t a_scd4x_iic_write(scd4x_handle_t *handle, uint16_t reg, uint8_t *
     
     if (handle->iic_write_cmd(SCD4X_ADDRESS, (uint8_t *)buf, len + 2) != 0)        /* write iic command */
     {
-        return 1;                                                                  /* write command */
+        return 1;                                                                  /* return error*/
     }
     else
     {
@@ -873,6 +873,7 @@ uint8_t scd4x_ambient_pressure_convert_to_data(scd4x_handle_t *handle, uint16_t 
  *             - 2 handle is NULL
  *             - 3 handle is not initialized
  *             - 4 crc is error
+ *             - 5 result is error
  * @note       none
  */
 uint8_t scd4x_perform_forced_recalibration(scd4x_handle_t *handle, uint16_t co2_raw, uint16_t *frc)
@@ -908,6 +909,12 @@ uint8_t scd4x_perform_forced_recalibration(scd4x_handle_t *handle, uint16_t co2_
         return 4;                                                                                /* return error */
     }
     *frc = (uint16_t)(((uint16_t)out_buf[0]) << 8) | out_buf[1];                                 /* set frc */
+    if ((*frc) == 0x7FFF)                                                                        /* check the result */
+    {
+        handle->debug_print("scd4x: result is error.\n");                                        /* result is error */
+       
+        return 5;                                                                                /* return error */
+    }
     
     return 0;                                                                                    /* success return 0 */
 }
